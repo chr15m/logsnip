@@ -1,0 +1,102 @@
+#!/bin/sh
+
+# when="$2"
+# log="$1"
+
+dfmt_syslog="^%b %_d %H:%M"
+
+# defaults
+host="$1"
+log="$2"
+timespec="$3"
+minutes="${4-5}"
+
+# default root user added to host
+case "$host" in
+  *@*)
+    # keep host as it was
+    ;;
+  *)
+    # add root user
+    host="root@$host"
+    ;;
+esac
+
+# what kind of log is the user looking for?
+case "$log" in
+   auth.log)
+     dfmt="$dfmt_syslog"
+     log='auth.log'
+     logwild="$log*"
+     ;;
+   syslog)
+     dfmt="$dfmt_syslog"
+     log='syslog'
+     logwild="$log*"
+     ;;
+   nginx/error.log)
+     dfmt="^%Y/%m/%d %H:%M"
+     log='nginx/error.log'
+     logwild='nginx/*error*.log*'
+     ;;
+   nginx/access.log)
+     dfmt=" \[%m/%b/%Y:%H:%M"
+     log='nginx/access.log'
+     logwild='nginx/*access*.log*'
+     ;;
+   uwsgi)
+     dfmt=" \[%a %b %_d %H:%M"
+     log='uwsgi/app/*.log'
+     logwild='uwsgi/app/*.log*'
+     ;;
+   *)
+     dfmt=""
+     log=""
+     ;;
+esac
+
+# show usage and exit if vars are unset
+if [ "$dfmt" = "" -o "$log" = "" ]
+then
+  echo "Echos a five-minute snippet from the specified log to stdout."
+  echo "Usage: `basename $0` HOST LOGTYPE TIMESPEC MINUTES"
+  echo
+  echo "  LOGTYPE   syslog, auth.log, uwsgi, nginx/error.log, nginx/access.log"
+  echo "  TIMESPEC  anything you can pass to the 'date' command."
+  echo "            e.g. 'now' or '2012-01-01 13:02' or '2:30pm yesterday' etc."
+  echo "  MINUTES   how many minutes to span before the specified time (5 mins default)"
+  echo 
+  exit 1;
+fi
+
+if [ "$3" = "" ]
+then
+  ssh "$host" "tail -n 100 $log"
+else
+  # build the dates regex
+  when="${3:-now}"
+  dates="("`TZ='utc' date -d"$when" +"$dfmt"`
+  for i in `seq $minutes`
+  do
+    d=`TZ='utc' date -d"-$i minutes ${when}" +"$dfmt"`
+    dates="$dates|$d"
+  done
+  dates="$dates)"
+  # make the remote call
+  ssh "$host" "zgrep -E '$dates' /var/log/$logwild"
+fi
+
+# /var/log/uwsgi/app/uwsgi-culturecounts.cc.log
+#  [Thu Oct 11 13:52:38 2018] 
+
+# /var/log/syslog
+# Oct 11 05:53:17
+
+# /var/log/auth.log
+# Oct 11 06:11:21 
+
+# /var/log/nginx/error.log
+# 2018/10/11 06:00:51 
+
+# /var/log/nginx/acess.log
+# [11/Oct/2018:06:11:39 

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="terminal" baseProfile="full" viewBox="0 0 960 359" width="960" version="1.1">
+    <defs>
+        <termtosvg:template_settings xmlns:termtosvg="https://github.com/nbedos/termtosvg">
+            <termtosvg:screen_geometry columns="120" rows="21"/>
+        </termtosvg:template_settings>
+        <style type="text/css" id="generated-style"><![CDATA[:root {
+            --animation-duration: 10530ms;
+        }
+        
+        #screen {
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 14px;
+            }
+
+        text {
+            dominant-baseline: text-before-edge;
+        }]]></style>
+        <style type="text/css" id="user-style">
+            /* Solarized light color theme (http://ethanschoonover.com/solarized) */
+            .foreground {fill: #586e75;}
+            .background {fill: transparent;}
+            .color0 {fill: #fdf6e3;}
+            .color1 {fill: #dc322f;}
+            .color2 {fill: #859900;}
+            .color3 {fill: #b58900;}
+            .color4 {fill: #268bd2;}
+            .color5 {fill: #6c71c4;}
+            .color6 {fill: #2aa198;}
+            .color7 {fill: #586e75;}
+            .color8 {fill: #839496;}
+            .color9 {fill: #cb4b16;}
+            .color10 {fill: #eee8d5;}
+            .color11 {fill: #93a1a1;}
+            .color12 {fill: #657b83;}
+            .color13 {fill: #073642;}
+            .color14 {fill: #d33682;}
+            .color15 {fill: #002b36;}
+        </style>
+    </defs>
+    <svg id="screen" width="960" viewBox="0 0 960 357" preserveAspectRatio="xMidYMin meet">
+        <defs><g id="g1"><text class="foreground" lengthAdjust="spacingAndGlyphs" textLength="136" x="0">chrism@diziet:~$&#160;</text><text class="background" lengthAdjust="spacingAndGlyphs" textLength="8" x="136">&#160;</text></g><g id="g2"><text class="foreground" lengthAdjust="spacingAndGlyphs" textLength="536" x="0">chrism@diziet:~$&#160;logsnip&#160;mccormick.cx&#160;auth.log&#160;"2018-10-01&#160;10:59"&#160;1</text><text class="background" lengthAdjust="spacingAndGlyphs" textLength="8" x="536">&#160;</text></g><g id="g3"><text class="background" lengthAdjust="spacingAndGlyphs" textLength="8" x="0">&#160;</text></g><g id="g4"><text class="foreground" lengthAdjust="spacingAndGlyphs" textLength="536" x="0">chrism@diziet:~$&#160;logsnip&#160;mccormick.cx&#160;auth.log&#160;"2018-10-01&#160;10:59"&#160;1</text></g><g id="g5"><text class="foreground" lengthAdjust="spacingAndGlyphs" textLength="960" x="0">/var/log/auth.log.1:Oct&#160;&#160;1&#160;10:58:36&#160;mccormix&#160;snoopy[16041]:&#160;[uid:0&#160;sid:16041&#160;tty:&#160;cwd:/&#160;filename:/usr/sbin/sshd]:&#160;/usr/s</text></g><g id="g6"><text class="foreground" lengthAdjust="spacingAndGlyphs" textLength="96" x="0">bin/sshd&#160;-R&#160;</text></g><g id="g7"><text class="foreground" lengthAdjust="spacingAndGlyphs" textLength="744" x="0">/var/log/auth.log.1:Oct&#160;&#160;1&#160;10:58:39&#160;mccormix&#160;sshd[16041]:&#160;Invalid&#160;user&#160;luis&#160;from&#160;36.75.126.35</text></g><g id="g8"><text class="foreground" lengthAdjust="spacingAndGlyphs" textLength="872" x="0">/var/log/auth.log.1:Oct&#160;&#160;1&#160;10:58:39&#160;mccormix&#160;sshd[16041]:&#160;input_userauth_request:&#160;invalid&#160;user&#160;luis&#160;[preauth]</text></g><g id="g9"><text class="foreground" lengthAdjust="spacingAndGlyphs" textLength="808" x="0">/var/log/auth.log.1:Oct&#160;&#160;1&#160;10:58:39&#160;mccormix&#160;sshd[16041]:&#160;Connection&#160;closed&#160;by&#160;36.75.126.35&#160;[preauth]</text></g><g id="g10"><text class="foreground" lengthAdjust="spacingAndGlyphs" textLength="168" x="0">chrism@diziet:~$&#160;exit</text></g></defs><rect class="background" height="100%" width="100%" x="0" y="0"/><g display="none"><rect class="foreground" height="17" width="8" x="136" y="0"/><use y="0" xlink:href="#g1"/><animate attributeName="display" begin="0ms; anim_last.end" dur="396ms" from="inline" to="inline"/></g><g display="none"><rect class="foreground" height="17" width="8" x="536" y="0"/><use y="0" xlink:href="#g2"/><animate attributeName="display" begin="396ms; anim_last.end+396ms" dur="702ms" from="inline" to="inline"/></g><g display="none"><rect class="foreground" height="17" width="8" x="0" y="17"/><use y="17" xlink:href="#g3"/><animate attributeName="display" begin="1098ms; anim_last.end+1098ms" dur="4106ms" from="inline" to="inline"/></g><g display="none"><rect class="foreground" height="17" width="8" x="0" y="102"/><use y="102" xlink:href="#g3"/><animate attributeName="display" begin="5204ms; anim_last.end+5204ms" dur="709ms" from="inline" to="inline"/></g><g display="none"><rect class="foreground" height="17" width="8" x="136" y="102"/><use y="102" xlink:href="#g1"/><animate attributeName="display" begin="5913ms; anim_last.end+5913ms" dur="3617ms" from="inline" to="inline"/></g><g display="none"><use y="0" xlink:href="#g4"/><animate attributeName="display" begin="1098ms; anim_last.end+1098ms" dur="9432ms" from="inline" to="inline"/></g><g display="none"><use y="17" xlink:href="#g5"/><use y="34" xlink:href="#g6"/><use y="51" xlink:href="#g7"/><use y="68" xlink:href="#g8"/><use y="85" xlink:href="#g9"/><animate attributeName="display" begin="5204ms; anim_last.end+5204ms" dur="5326ms" from="inline" to="inline"/></g><g display="none"><use y="102" xlink:href="#g10"/><rect class="foreground" height="17" width="8" x="0" y="119"/><use y="119" xlink:href="#g3"/><animate attributeName="display" begin="9530ms; anim_last.end+9530ms" dur="1000ms" from="inline" to="inline" id="anim_last"/></g></svg>
+</svg>
