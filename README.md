@@ -7,7 +7,7 @@ Shell script for getting fragments of logfiles from a specific time period.
 # Install
 
 ```shell
-curl https://raw.githubusercontent.com/chr15m/logsnip/master/logsnip > ~/bin/logsnip && chmod 755 ~/bin/logsnip
+curl https://chr15m.github.io/logsnip/logsnip > ~/bin/logsnip && chmod 755 ~/bin/logsnip
 ```
 
 # Usage
