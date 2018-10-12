@@ -1,7 +1,7 @@
 Shell script for getting fragments of logfiles from a specific time period.
 
 <p align="center">
-    <img src="https://cdn.rawgit.com/chr15m/logsnip/master/screencast.svg"/>
+    <img src="https://chr15m.github.io/logsnip/screencast.svg"/>
 </p>
 
 # Install
