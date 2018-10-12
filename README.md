@@ -18,6 +18,6 @@ Usage: logsnip HOST LOGTYPE TIMESPEC MINUTES
   LOGTYPE   syslog, auth.log, uwsgi, nginx/error.log, nginx/access.log
   TIMESPEC  anything you can pass to the 'date' command.
             e.g. 'now' or '2012-01-01 13:02' or '2:30pm yesterday' etc.
-  MINUTES   how many minutes to span before the specified time (5 mins default)
+  MINUTES   how many minutes to include up to the specified time (5 mins default)
 ```
 

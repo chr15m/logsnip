@@ -64,7 +64,7 @@ then
   echo "  LOGTYPE   syslog, auth.log, uwsgi, nginx/error.log, nginx/access.log"
   echo "  TIMESPEC  anything you can pass to the 'date' command."
   echo "            e.g. 'now' or '2012-01-01 13:02' or '2:30pm yesterday' etc."
-  echo "  MINUTES   how many minutes to span before the specified time (5 mins default)"
+  echo "  MINUTES   how many minutes to include up to the specified time (5 mins default)"
   echo 
   exit 1;
 fi
